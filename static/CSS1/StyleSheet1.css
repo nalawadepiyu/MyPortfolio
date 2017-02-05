@@ -1,0 +1,43 @@
+﻿ .rotate90 {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+
+    .text{
+       font-family: 'Open Sans', sans-serif;    
+
+    }
+     .portfolio-item{
+    display: block;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    }
+
+hr.star-primary {
+    border: none;
+    height: 5px;
+    width: 200px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+  .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #20BCE5;
+            padding: 25px;
+        }
+
+        .text-color{
+            color:white;
+        }
