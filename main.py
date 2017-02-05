@@ -41,29 +41,28 @@ class HomeHandler(BlogHandler):
 
 class ContactMeHandler(BlogHandler):
     def post(self):
-        print "post"
         email = self.request.get('email')
         name = self.request.get('name')
-        message = self.request.get('message')
+        msg = self.request.get('message')
 
-        if email and name and message:
-            print "if"
+        if email and name and msg:
+            print email
             message = mail.EmailMessage(
                 sender="Contact Me @ <piyu1081991@gmail.com>",
                 subject="Contact Me")
 
             message.to = "Priyanka Nalawde <piyu1081991@gmail.com>",
-
-            message.html = """
+            msg_body = """
                 <html><head></head><body>
-                Message: %s
+                Message: {0}
                 <br>
-                From: %s
+                From: {1}
                 <br>
                 </body></html>
-                """ % (message, email)
+                """ .format(msg, email)
+            print msg_body
+            message.html = msg_body
             message.send()
-            print "works"
             self.redirect('/#contact')
 
 app = webapp2.WSGIApplication([
